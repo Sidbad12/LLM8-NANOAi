@@ -1,0 +1,12 @@
+{
+  "Heart Attack Knowledge": {
+    "path": "knowledge_bases\\heart_attack_knowledge.py",
+    "type": "heart_conditions",
+    "loaded": false
+  },
+  "Comprehensive Medical": {
+    "path": "knowledge_bases\\create_comprehensive_knowledge_base.py",
+    "type": "general_medical",
+    "loaded": false
+  }
+}

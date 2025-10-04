@@ -1,0 +1,12 @@
+{
+  "Heart-Specific Model": {
+    "path": "app\\models\\heart_attack_specialized_complete\\model",
+    "type": "heart_specialized",
+    "description": "Specialized model for heart conditions"
+  },
+  "Medical GPT-2 Model": {
+    "path": "app\\models\\medical_distilgpt2_complete\\model",
+    "type": "general_medical",
+    "description": "General medical knowledge model"
+  }
+}

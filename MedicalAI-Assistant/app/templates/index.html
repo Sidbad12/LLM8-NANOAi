@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Assistant - Heart Specialist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">❤️</div>
+                    <div>
+                        <h1>LLM8</h1>
+                        <p>Now using Heart-Specialized Medical AI</p>
+                    </div>
+                </div>
+                <div class="status" id="statusIndicator">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Loading...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Cardiac Consultation</h2>
+                    <div class="model-info">
+                        <span class="ai-badge">AI-Powered</span>
+                        <span class="source-badge" id="sourceBadge">Heart-Specialized Model</span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                <strong>Welcome to CardioAI Assistant!</strong><br>
+                                I'm specialized in heart-related medical information. 
+                                You can ask me about symptoms, treatment, prevention, 
+                                or general information about heart conditions.
+                            </div>
+                            <div class="message-meta">AI Assistant • Just now</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ask about heart symptoms, treatment, or prevention..."
+                            autocomplete="off"
+                        >
+                        <button id="sendButton" onclick="sendMessage()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        💡 Try: "What are heart attack symptoms?" or "How to prevent stroke?"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Quick Questions</h3>
+                    <div class="quick-questions">
+                        <button class="quick-btn" onclick="askQuickQuestion('What are the symptoms of a heart attack?')">
+                            ❤️ Heart Attack Symptoms
+                        </button>
+                        <button class="quick-btn" onclick="askQuickQuestion('How to treat chest pain?')">
+                            ⚕️ Chest Pain Treatment
+                        </button>
+                        <button class="quick-btn" onclick="askQuickQuestion('How to prevent heart disease?')">
+                            🛡️ Heart Disease Prevention
+                        </button>
+                        <button class="quick-btn" onclick="askQuickQuestion('What causes stroke?')">
+                            🧠 Stroke Causes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>System Information</h3>
+                    <div class="system-info">
+                        <div class="info-item">
+                            <span>AI Model:</span>
+                            <strong id="modelType">Heart-Specialized DistilGPT2</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>Status:</span>
+                            <span class="status-online" id="systemStatus">Online</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Responses:</span>
+                            <span id="responseSource">AI Model & Knowledge Base</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Medical Disclaimer</h3>
+                    <div class="disclaimer">
+                        <p>⚠️ This AI provides informational support only. Always consult healthcare professionals for medical advice, diagnosis, or treatment. In emergencies, call local emergency services immediately.</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

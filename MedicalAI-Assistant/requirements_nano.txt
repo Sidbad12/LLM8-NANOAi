@@ -1,0 +1,42 @@
+# -----------------------------
+# Core Flask Web App Packages
+# -----------------------------
+Flask==2.0.3
+Flask-Cors==3.0.10
+Werkzeug==2.0.3
+Jinja2==3.0.3
+itsdangerous==2.0.1
+click==8.0.4
+
+# -----------------------------
+# Machine Learning & NLP
+# -----------------------------
+torch==1.10.0
+transformers==4.25.1
+numpy==1.19.5
+tqdm==4.64.1
+regex==2022.10.31
+sentencepiece==0.1.96
+
+# -----------------------------
+# Data & File Handling
+# -----------------------------
+pandas==1.1.5
+requests==2.27.1
+PyYAML==5.4.1
+joblib==1.1.0
+scikit-learn==0.24.2
+
+# -----------------------------
+# Utility / Logging / System
+# -----------------------------
+colorama==0.4.6
+psutil==5.9.5
+typing-extensions==4.1.1
+packaging==21.3
+protobuf==3.20.3
+
+# -----------------------------
+# Optional (GUI / Testing)
+# -----------------------------
+pytest==6.2.5
